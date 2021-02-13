@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS</title>
+        <link rel="stylesheet" href="mainmin.css">
+    </head>
+    <body>
+        <h1 class="title"> Laboratorio 1: HTML5 </h1>
+        <h2>¿Quién soy?</h2>
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJV9LvDJ6GFQOqdORINWwXwn-PbBj2SWkUKQ&usqp=CAU"
+            alt="Artículo Felipe Yépez Robotic Minds"
+            class="center">
+        <p>Soy <strong>Felipe Yépez</strong> , estudiante de Ingeniería en
+            Computación y tecnologías de la información en el Tecnológico de
+            Monterrey campus Querétaro. </p>
+        <address>
+            <code>A01658002</code>
+            Mail: a01658002@itesm.mx
+        </address>
+        <p>He ganado competencial mundiales de robótica Lego y desarrollo de
+            software,
+            específicamente desarrollo móvil, he participado en diferentes
+            hackathons
+            desarrollando bots, computer vision para una UCI en Praga y un Game
+            Jam
+            desarrollando un videojuego 2D en equipo. Gané junto a mi compañera
+            el
+            AI Gaming Latinoamérica 2020 creando un bot con el Computer Vision
+            API
+            de Azure. Me encanta aprender y hacer cursos online de diferentes
+            temas.
+            Me gusta invertir en bolsa, criptomonedas básico, jugar videojuegos
+            y
+            hacer la mayor parte de los deportes. </p>
+        <code>Hola Mundo!</code>
+        <hr>
+        <br>
+        <h2>Sabias que... versión HTML</h2>
+        <h4> ¿Cuál es la diferencia entre Internet y la World Wide Web?</h4>
+        <p>El Internet es una red de computadoras conectadas mientras que la
+            World
+            Wide Web es un sistema de información de documentos de hipertexto
+            enlazados entre sí
+            a los cuales se puede acceder gracias a la existencia del internet.
+        </p>
+        <h4>¿Cuáles son las partes de un URL?</h4>
+        <p>
+            Un <strong>URL</strong> está compuesto principalmente de 3 partes:</p>
+        <ul><li><strong>Protocolo- </strong>Indica cómo conectarse</li>
+            <li><strong>Dominio: </strong>Es el servidor</li>
+            <li><strong>Ruta: </strong>Especifica la ubicación del recurso</li>
+            <li><strong>Parámetros: </strong>Información adicional para
+                identificar o filtrar recursos del servidor</li>
+            <li><strong>Documento: </strong> Los archivos al igual que este
+                que componen lo que se muestra</li>
+        </ul>
+        <h4>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT,
+            PATCH, DELETE?</h4>
+        <ul>
+            <li> <strong>GET:</strong> Para pedir información de un recurso en
+                específico</li>
+            <li> <strong>HEAD:</strong> Similar a GET, no contiene body en su
+                return se usa para verificar presencia de un recurso antes de
+                utilizar GET</li>
+            <li> <strong>POST:</strong> Para enviar informacion a un servidor</li>
+            <li> <strong>PUT:</strong> Actualizar un determinado recurso en el
+                servidor</li>
+            <li> <strong>PATCH:</strong> Para aplicar una modificación temporal
+                a un recurso</li>
+            <li> <strong>DELETE:</strong> Para eliminar un recurso en específico</li>
+        </ul>
+        <h4>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
+            ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por
+            qué?</h4>
+        <p>Se debe utilizar <strong>POST </strong> para enviar la información,
+            sin embargo esta debe ser encriptada o tener algún tipo de seguridad
+            dado que se trata de una contraseña.</p>
+        <h4>¿Qué método HTTP se utiliza cuando a través de un navegador web se
+            accede a una página a través de un URL?</h4>
+        <p>Se utilizaría el método <strong>GET </strong> para obtener
+            información de los recursos</p>
+        <h4>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué
+            significa esto? ¿Ocurrió algún error?</h4>
+        <p>Este código <strong>200</strong> significa que la ejecución se
+            realizó con éxito sin ningún error.</p>
+        <h4>¿Es responsabilidad del desarrollador corregir un sitio web si un
+            usuario reporta que intentó acceder al sitio y se encontró con un
+            error 404? ¿Por qué?</h4>
+        <p>No, esto significa que el usuario intentó acceder a un recurso
+            inexistente.</p>
+        <h4>¿Es responsabilidad del desarrollador corregir un sitio web si un
+            usuario reporta que intentó acceder al sitio y se encontró con un
+            error 500? ¿Por qué?</h4>
+        <p>Si, dado que en este caso se trata de un error del servidor, es decir
+            hay un problema con el código del desarrollador.</p>
+        <h4>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+            (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5
+            estén desaprobados.</h4>
+        <p>Significa que dicho atributo ya no es recomendado ni reconocido
+            por las nuevas versiones de HTML. Ejemplos claros de la
+            actualización de HTML5 son: </p>
+        <ul>
+            <li>CENTER</li>
+            <li>FONT</li>
+            <li>STRIKE</li>
+            <li>BASEFONT</li>
+        </ul>
+        <h4>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h4>
+        <p>Desde que se empieza un documento HTML5 lo primero que se nota que
+            cambió fue el DOCTYPE.
+            También se agregaron etiquetas para video y audio, tuvo nueva
+            estructura con las etiquetas article, footer, header, nav y section.
+            Agregó mejoras en sus inputs, ahora pudiendo tener datos de entrada
+            del usuario de manera más amigable
+        </p>
+        <h4>¿Qué componentes de estructura y estilo tiene una tabla?</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>thead para el encabezado</th>
+                    <th>th encabezado de grupo de celdas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        tbody para contenido de tabla, colspan numero de
+                        columnas a usar
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        tr definir una fila
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>td definir columnas</td>
+                    <td>td Columna 2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td rowspan="2">tfoot Define filas al final de la tabla con
+                        rowspan para agrandar tamaño de celda.</td>
+                    <td>celda 1</td>
+                </tr>
+                <tr><td>celda 2</td></tr>
+            </tfoot>
+        </table>
+        <h4>¿Cuáles son los principales controles de una forma HTML5?</h4>
+        <p>Los principales controles son:</p>
+        <ul>
+            <li>Button</li>
+            <li>Label</li>
+            <li>Legend</li>
+            <li>Input</li>
+        </ul>
+
+        <h4>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?
+            Puedes
+            utilizar la siguiente página para descubrirlo:
+            http://html5test.com/
+            (Al responder la pregunta recuerda poner el navegador que
+            utilizas)</h4>
+        <p>Utilizo Google Chrome y mi navegador obtuvo 528 de 555 puntos, según
+            las comparaciones con otros navegadores este es el que tiene mayor
+            soporte.</p>
+        <br>
+        <h3>Sobre el ciclo de vida y desarrollo de los sistemas de
+            información:</h3>
+        <h4>¿Cuál es el ciclo de vida de los sistemas de información?</h4>
+        <p>
+            El ciclo de vida de un sistema de información engloba todas las
+            actividades del proyecto:</p>
+        <ol>
+            <li><strong>Diseño conceptual: </strong> Se determina la
+                necesidad y se evaluan potenciales soluciones. Guía de las
+                actividades del proyecto para enfocarse en objetivos y
+                entregables de los respectivos avances
+            </li>
+            <ul>
+                <li>Identificación de necesidades</li>
+                <li>Análisis de factibilidad</li>
+                <li>Requerimientos del sistema</li>
+                <li>Especificaciones del sistema</li>
+                <li>Revisión del diseño conceptual</li>
+            </ul>
+
+            <li><strong>Diseño preliminar del sistema: </strong> Se diseñan
+                las funcionalidades de los subsistemas que darán soporte al
+                sistema, se definen interfaces entre subsistemas así como
+                una evaluación general de requerimientos
+            </li>
+            <ul>
+                <li>Análisis de funcionalidades</li>
+                <li>Asignación de recursos para requerimientos</li>
+                <li>Opciones del sistema</li>
+                <li>Diseño de modelos preliminares</li>
+                <li>Especificaciones del desarrollo</li>
+                <li>Revisión del diseño preliminar</li>
+            </ul>
+
+            <li><strong>Diseño detallado y desarrollo</strong>
+                Especificación de diseño e interfaces
+            </li>
+            <ul>
+                <li>Desarrollo de prototipos</li>
+                <li>Especificación de procesos</li>
+            </ul>
+
+            <li><strong>Producción y desarrollo: </strong> Inicia desarrollo
+                según especificaciones anteriores
+            </li>
+            <ul>
+                <li>Producción</li>
+                <li>Pruebas</li>
+                <li>Distribución del sistema y operaciones</li>
+            </ul>
+
+            <li><strong>Uso y soporte: </strong> Se usa el sistema para sus
+                propósitos definidos
+            </li>
+            <ul>
+                <li>Uso del sistema en ambiente de usuario</li>
+                <li>Modificaciones para mejoras</li>
+            </ul>
+
+            <li><strong>Efectividad: </strong> Se evalúa constantemente
+                correcto funcionamiento del sistema pata que esté en su
+                eficiencia más alta
+
+            </li>
+
+        </ol>
+        <h4>¿Cuál es el ciclo de desarrollo de sistemas de información?</h4>
+        <p>
+            El ciclo de desarrollo de un sistema de información se enfoca en
+            realizar los requerimientos del producto.
+            Los sistemas son desarrollados de mejor manera mediante un ciclo de
+            actividades: </p>
+        <ol>
+            <li><strong>Planificación: </strong> Prepara diseño, define
+                alcance, metodología de desarrollo, designar roles,
+                responsabilidades y plazos</li>
+            <li><strong>Análisis: </strong>Se definen requisitos que debe
+                incorporar el sistema</li>
+            <li><strong>Diseño: </strong> Se define cómo se cumple con
+                requerimientos, se opta por opciónes más efectivas o
+                eficientes dependiendo de costos y complejidad</li>
+            <li><strong>Desarrollo: </strong> Marca inicio de producción</li>
+            <li><strong>Integración y pruebas: </strong> Se valida
+                funcionamiento y detectan errores</li>
+            <li><strong>Implementación: </strong> Se instala tanto harware
+                como software, se genera documentación y capacitación de uso
+                del sistema</li>
+            <li><strong>Mantenimiento: </strong> Se realizan ajustes
+                necesarios para mejorar rendimiento y asegurar funcionaiento
+                óptimo del sistema</li>
+        </ol>
+        <br>
+        <hr>
+        <footer>
+            <h3>Referencia: </h3>
+            <ol>
+                <li>Aviani, G. (2019, September 12). An introduction to HTTP:
+                    everything you need to know. FreeCodeCamp.Org.
+                    https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/</li>
+                <li>HTML Tutorial. (n.d.). W3Schools.
+                    https://www.w3schools.com/html/default.asp</li>
+                <li>PowerData, R. (2019, June 7). Ciclo de vida de un sistema de
+                    información: fases y componentes. PowerData.
+                    https://blog.powerdata.es/el-valor-de-la-gestion-de-datos/ciclo-de-vida-de-un-sistema-de-informacion-fases-y-componentes</li>
+                <li>Wikipedia contributors. (2021, February 10). Systems
+                    development
+                    life cycle. Wikipedia.
+                    https://en.wikipedia.org/wiki/Systems_development_life_cycle#:%7E:text=According%20to%20Taylor%20(2004)%2C,on%20realizing%20the%20product%20requirements%22.</li>
+            </ol>
+            <hr>
+            <h3>Editor de HTML: </h3>
+            <p><strong>Visual Studio Code, </strong> <a
+                    href="https://code.visualstudio.com/">VSCode</a></p>
+            <label for="estrellas">Te gusta VSCode?</label>
+            <input type="range" id="slider" min="0" max="5">
+            <hr>
+            <br>
+        </footer>
+    </body>
+
+</html>
