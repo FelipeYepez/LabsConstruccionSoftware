@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+}
+
+h1{
+    color: #333;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+table{
+    margin: auto;
+    color:chocolate;
+    border-collapse: collapse;
+}
+
+td, th, tr{
+    border: 1px solid black;
+}
