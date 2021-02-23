@@ -81,3 +81,57 @@ function promedio(matriz){
     document.write("] = [" + resp + "]");
     return resp;
 }
+
+// Funcion invertir número
+function invertir(num){
+    let inv = 0;
+    let aux;
+    document.write("<p>" + num + " => ");
+    while(num >= 1){
+        aux = num % 10;
+        inv *= 10;
+        inv += aux;
+        num = Math.floor(num/10);
+    }
+    document.write(inv + "</p>");
+    return inv;
+}
+
+class twoSum{
+    constructor(array, sum, dif){
+        this.numbers = array;
+        this.suma = sum;
+        this.diferencia = dif;
+    }
+    
+    twosum() {
+        const array = this.numbers;
+        const sum = this.suma;
+        document.write("<p> Para sumar <strong>" + sum + "</strong> se debe utilizar los índices ");
+        const n = array.length;
+        for(let i = 0; i<n; i++){
+            for(let j=i+1; j<n; j++){
+                if(array[i] + array[j] === sum){
+                    document.write("<strong>" + i + " y " + j + "</strong> del arreglo [" + array + "]</p>");
+                    return (i,j);
+                }
+            }
+        }
+        return -1;
+    }
+    twodif() {
+        const array = this.numbers;
+        const dif = this.diferencia;
+        document.write("<p> Para obtener <strong>" + dif + "</strong> se debe hacer la resta utilizando los índices ");
+        const n = array.length;
+        for(let i = 0; i<n; i++){
+            for(let j=0; j<n; j++){
+                if(i!= j && array[i] - array[j] === dif){
+                    document.write("<strong>" + i + " y " + j + "</strong> del arreglo [" + array + "]</p>");
+                    return (i,j);
+                }
+            }
+        }
+        return -1;
+    }
+}

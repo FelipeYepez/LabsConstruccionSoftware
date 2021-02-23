@@ -1,11 +1,37 @@
 body{
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #566b78;
+    background-image: url("https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg");
+}
+
+h2 {
+    color:#6495ed;
+    margin-top: 1em;
+    padding-top: 1em;
     text-align: center;
 }
 
-h1{
-    color: #333;
-    text-align:center;
-    text-transform: uppercase;
+p{
+    background-color:whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+h4{
+    border-left: 6px solid #6495ed;
+    padding-left: 10px;
+}
+
+h1 {
+  color: #333;
+}
+
+strong{
+    color:#6495ed;
 }
 
 table{
