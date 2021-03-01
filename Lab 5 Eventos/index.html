@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PO Eventos</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Laboratorio 5: Programación orientada a eventos</h1>
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                    <h2>Validador de contraseñas</h2>
+                    <form>
+                        <ul>
+                            <li id="regla1">Contener mínimo 5 caracteres</li>
+                            <li id="regla2">Contraseñas deben coincidir</li>
+                        </ul>
+                        <div class="form">
+                            <input id="1pass" type="password" required>
+                            <label>Contraseña</label>
+                        </div>
+                        <div class="form">
+                            <input id="2pass" type="password" required>
+                            <label>Verificar contraseña</label>
+                        </div>
+                        <button class="btn" onclick="verifyPassword()">Verificar
+                            Contraseña</button>
+                    </form>
+                </div>
+            </section>
+            <br>
+            <hr>
+            <section>
+                <div class="products">
+                    <div class="product">
+                        <h2>Adidas Yeezy Boost</h2>
+                    </div>
+                    <div class="product">
+                        <h2>Cangurera Adidas</h2>
+                    </div>
+                    <div class="product">
+                        <h2>Gorra Adidas</h2>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/2358/2817/products/Wethenew-Sneakers-France-Adidas-Yeezy-Boost-350-V2-Zebra-1_600x.png?v=1541153763"
+                            alt="Adidas Yeezy Boost 350">
+                    </div>
+                    <div class="product">
+                        <img
+                            src="https://cdn.shopify.com/s/files/1/0150/2598/products/Screen_Shot_2018-11-15_at_1.08.12_AM_560x.png?v=1572314586"
+                            alt="Skagen Watch">
+                    </div>
+                    <div class="product">
+                        <img
+                            src="https://i.pinimg.com/originals/52/9f/57/529f57192de156db1b0f23fc334bc18d.png"
+                            alt="Skagen Watch">
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product">
+                        <p class="prices">
+                            <span>$</span>
+                            <span id="pricezapato">150</span></p>
+                        <p class="center">
+                            <span>Cantidad disponible:</span>
+                            <span id="stockzapato">15</span></p>
+                        <div class="center">
+                            <button class="btnquant"
+                                onclick="addQuantity('zapato',-1)">-</button>
+                            <label id="cantzapato" class="quantity">0</label>
+                            <button class="btnquant"
+                                onclick="addQuantity('zapato',1)">+</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <p class="prices">
+                            <span>$</span>
+                            <span id="pricebolsa">25</span></p>
+                        <p class="center">
+                            <span>Cantidad disponible:</span>
+                            <span id="stockbolsa">7</span></p>
+                        <div class="center">
+                            <button class="btnquant"
+                                onclick="addQuantity('bolsa',-1)">-</button>
+                            <label id="cantbolsa" class="quantity">0</label>
+                            <button class="btnquant"
+                                onclick="addQuantity('bolsa',1)">+</button>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <p class="prices">
+                            <span>$</span>
+                            <span id="pricegorra">30</span></p>
+                        <p class="center">
+                            <span>Cantidad disponible:</span>
+                            <span id="stockgorra">23</span></p>
+                        <div class="center">
+                            <button class="btnquant"
+                                onclick="addQuantity('gorra',-1)">-</button>
+                            <label id="cantgorra" class="quantity">0</label>
+                            <button class="btnquant"
+                                onclick="addQuantity('gorra',1)">+</button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div class="container">
+                    <h1 class="cartitle">Carrito de compras</h1>
+                    <h2>Subtotal: $<span id="subt">0</span></h2>
+                    <h3>Iva: $<span id="iva">0</span></h3>
+                    <h1>Total: $<span id="total">0</span></h1>
+                </div>
+            </section>
+            <hr>
+            <br>
+            <section>
+                <div class="preguntas">
+                    <h2>Sabias que... versión Programación Orientada a Eventos</h2>
+                    <h4>¿Por qué es una buena práctica usar JavaScript para checar
+                        que sean válidos los inputs de las formas antes de enviar
+                        los datos al servidor?</h4>
+                    <p>
+                        Al utilizar JavaScript se puede verificar que los datos sean
+                        válidos con la finalidad de no enviarlos incorrectamente al
+                        servidor, de esta manera se puede proporcionar
+                        retroalimentación visual de mejor entenimiento para el
+                        usuario antes de que realmente suceda un error. De igual
+                        forma se evita requerir información por parte del servidor
+                        evitando tráfico.
+                    </p>
+                    <h4>¿Cómo puedes saltarte la seguridad de validaciones hechas
+                        con JavaScript?</h4>
+                    <p>Para desactivar la validación automática del navegador se
+                        puede escribir <strong>novalidate</strong> en el inspector
+                        de la página. Por esta razón es importante de igual forma
+                        validar los datos del lado del servidor.</p>
+                    <h4>Si te puedes saltar la seguridad de las validaciones de
+                        JavaScript, entonces ¿por qué la primera pregunta dice que
+                        es una buena práctica?</h4>
+                    <p>No todos quieren saltarse las validaciones a propósito por lo
+                        que realizarlas desde Javascript mejora la experiencia del
+                        usuario al presentar alertas de manera instantánea sin tener
+                        que esperar a que se envíen los datos incorrectamente. Se
+                        presenta retroalimentación para errores accidentales antes
+                        de que realmente sucedan.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h3>Referencias: </h3>
+            <ol>
+                <li>JavaScript - Form Validation. (n.d.). Tutorialspoint.
+                    https://www.tutorialspoint.com/javascript/javascript_form_validations.htm</li>
+                <li>JavaScript Form Validation. (n.d.). W3schools. https://www.w3schools.com/js/js_validation.asp</li>
+            </ol>
+            <hr>
+        </footer>
+        <script src="dom.js"></script>
+    </body>
+</html>
