@@ -1,0 +1,34 @@
+sp_help materiales
+¿Que muestra la instrucción?
+Tras crear la tabla materiales dicha instrucción muestra la información general
+de la tabla, su nombre, propietario, fecha de creación, columnas y su información, 
+identidad de la tabla.
+
+
+Ejecuta las instrucciones que contiene el archivo crear.sql
+¿Qué efecto tuvo esta acción?
+Al ejecutar el query se crean las tablas Materiales, Proveedores, Proyectos y 
+Entregan con sus atributos y tipos de dato correspondientes.
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+De esta manera al crear un archivo con los comandos para crear todas las tablas
+se las puede crear rápidamente a todas y guardar un registro de cómo se las crea.
+
+Abre una sesión de FTP y sube los siguientes archivos a tu directorio inicial.
+¿Qué relación tienen con las tablas de la base de datos? (checa su contenido)
+El contenido de los archivos pertenece a los registros correspondientes de cada 
+tabla almacenados en un archivo .csv plano en el que cada atributo se separa por 
+comas y cada registro por un salto de línea. Los tipos de dato coinciden.
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato
+en que se encuentran los datos en el archivo materiales.csv?
+En materiales.sql con el BULK INSERT se especifica los parámetros del archivo .csv
+que se utilizará para insertar los registros, se especifica que se utilizan comas
+para separar atributos y \n para distinguir cada registro.
+
+Después de la ejecución del comando, vuelve a revisar el contenido de la tabla 
+materiales mediante el uso de una consulta.
+SELECT  * FROM Materiales
+¿Qué sucedió?
+Con dicho comando se mostraron los registros que fueron insertados a la tabla por 
+el BULK INSERT.
