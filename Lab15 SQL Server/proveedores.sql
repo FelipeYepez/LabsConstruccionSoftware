@@ -1,5 +1,6 @@
+DELETE FROM Proveedores;
 BULK INSERT a1658002.a1658002.[Proveedores]
-   FROM 'e:\wwwroot\rcortese\proveedores.csv'
+   FROM 'e:\wwwroot\a1658002\proveedores.csv'
    WITH
       (
          CODEPAGE = 'ACP',

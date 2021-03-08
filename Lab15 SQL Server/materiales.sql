@@ -1,5 +1,6 @@
+DELETE FROM Materiales;
 BULK INSERT a1658002.a1658002.[Materiales]
-   FROM 'e:\wwwroot\rcortese\materiales.csv'
+   FROM 'e:\wwwroot\a1658002\materiales.csv'
    WITH
       (
          CODEPAGE = 'ACP',
