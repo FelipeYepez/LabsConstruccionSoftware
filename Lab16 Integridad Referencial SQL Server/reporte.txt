@@ -1,0 +1,101 @@
+Agrega un nuevo registro a la tabla de materiales:
+  INSERT INTO Materiales values(1000, 'xxx', 1000)
+
+Revisa el contenido de la tabla materiales y determina
+si existe alguna inconsistencia en el contenido de la
+tabla. ¿Cuál es? ¿A qué se debe?
+El registro creado no tiene sentido, se asignó una 
+descripción y costo erroneo a la clave 1000, se 
+duplicó la clave con otro material. No se cumple 
+la regla de llave primaria en la que con cada clave 
+tan solo debería existir un registro.
+
+Definiremos a la Clave como llave primaria de la tabla 
+de materiales, esto mediante la creación de un constraint.
+Agrega nuevamente el registro a la tabla de materiales
+¿Qué ocurrió? ¿Qué información muestra esta consulta?
+Marca un error de violación de la clave primaria dado que 
+la clave 1000 estaría duplicada.  El constraint muestra
+que la clave primaria definida para la tabla Materiales
+ahora es el atributo Clave. Se muestra el nombre de la
+restricción, acciones tanto para delete y update, y 
+estados de activación y replicación.
+
+Asegúrate de crear constraints análogos para definir las 
+llaves primarias de las tablas proveedores, y proyectos.
+¿Qué sentencias utilizaste para definir las llaves primarias?
+ALTER TABLE Proveedores add constraint llaveProveedores
+ PRIMARY KEY (RFC);
+ALTER TABLE Proyectos add constraint llaveProyectos
+ PRIMARY KEY (Numero);
+
+Define el constraint correspondiente a la llave primaria
+para la tabla entregan, considerando que en este caso, 
+la llave primaria está integrada por varias columnas.
+¿Qué sentencias utilizaste para definir este constrait?
+ALTER TABLE Entregan add constraint llavesEntregan
+ PRIMARY KEY(Clave, RFC, Numero, Fecha);
+
+Intenta insertar en la tabla entregan el siguiente registro:
+  INSERT INTO entregan values (0, 'xxx', 0, '1-jan-02', 0) ;
+¿Qué particularidad observas en los valores para clave, 
+ rfc y numero? ¿Cómo responde el sistema a la inserción
+ de este registro?
+Los valores insertados no corresponden a registros existentes
+ en el resto de tablas, el sistema marca que se realizó la
+ ejecución correctamente sin marcar errores creando el
+ registro deseado.
+
+ Ahora agreguemos el siguiente constraint:
+  ALTER TABLE entregan add constraint cfentreganclave
+  foreign key (clave) references materiales(clave);
+Intenta nuevamente la inserción del registro inconsistente.
+¿Qué significa el mensaje que emite el sistema?
+¿Qué significado tiene la sentencia anterior?
+El sistema marca error de inserción marcando que no se 
+cumple la restricción de llave foranea que Clave hace
+referencia a un registro inexistente de Material.
+
+Agrega los constraints correspondientes a rfc y número.
+Revisa los constraints de cada tabla.
+  sp_helpconstraint Entregan;
+¿Qué significan las columnas de esas consultas?
+Las restricciones creadas marcan Llaves Foráneas para
+los atributos de la tabla Entregan que hacen referencia
+a atributos del tipo Llave Primaria del resto de tablas.
+En el resto de tablas se muestra que se hace referencia
+a la tabla desde la tabla Entregan a través de la Llave 
+Foránea creada.
+
+Efectúa la siguiente sentencia INSERT:
+INSERT INTO entregan values (1000, 'AAAA800101', 5000, 
+  GETDATE(), 0);
+¿Qué uso se le está dando a GETDATE()?
+¿Tiene sentido el valor del campo de cantidad?
+GETDATE() se usa para obtener el momento exacto en el que
+se ejecutó el query, es decir en este caso el día y hora 
+exacta en el que se creó una entrega. El campo cantidad
+no tiene sentido ya que tiene valor de 0 y resulta inutil
+crear una entrega que en realidad es de cantidad nula de 
+un material para un proyecto de un proveedor. Es decir no
+se estaría realmente entregando algo.
+
+Para no permitir una cantidad igual a 0 utilizamos el 
+ siguiente constraint:
+  ALTER TABLE entregan add constraint cantidad 
+    check (cantidad > 0) ;
+¿Cómo responde el sistema? ¿Qué significa el mensaje?
+El sistema marca conflicto al momento en el que se intenta
+insertar un registro de cantidad equivalente o menor a 
+cero. Específicamente muestra que el constrain creado
+recientemente a través del CHECK no pudo validar el registro,
+es decir no cumplió con la restricción del sistema.
+
+
+--Integridad Referencial--
+La Integridad Referencial por lo visto se asegura que los
+registros en una base de datos sean coherentes tanto entre sí
+como en sus valores insertados. A través de restricciones el
+sistema asegura Unicidad, Integridad Referencial y validez en 
+los datos asegurándose de que sean coherentes con el atributo
+al que están siendo insertados.
