@@ -38,7 +38,7 @@ CREATE TABLE Entregan
 
 
 BULK INSERT a1658002.a1658002.[Materiales]
-  FROM 'e:\wwwroot\rcortese\materiales.csv'
+  FROM 'e:\wwwroot\a1658002\materiales.csv'
   WITH
   (
     CODEPAGE = 'ACP',
@@ -47,7 +47,7 @@ BULK INSERT a1658002.a1658002.[Materiales]
   )
 
 BULK INSERT a1658002.a1658002.[Proyectos]
-  FROM 'e:\wwwroot\rcortese\Proyectos.csv'
+  FROM 'e:\wwwroot\a1658002\Proyectos.csv'
   WITH
   (
     CODEPAGE = 'ACP',
@@ -56,7 +56,7 @@ BULK INSERT a1658002.a1658002.[Proyectos]
   )
 
 BULK INSERT a1658002.a1658002.[Proveedores]
-  FROM 'e:\wwwroot\rcortese\Proveedores.csv'
+  FROM 'e:\wwwroot\a1658002\Proveedores.csv'
   WITH
   (
     CODEPAGE = 'ACP',
@@ -66,7 +66,7 @@ BULK INSERT a1658002.a1658002.[Proveedores]
 
 SET DATEFORMAT dmy -- especificar formato de la fecha
 BULK INSERT a1658002.a1658002.[Entregan]
-  FROM 'e:\wwwroot\rcortese\Entregan.csv'
+  FROM 'e:\wwwroot\a1658002\Entregan.csv'
   WITH
   (
     CODEPAGE = 'ACP',
