@@ -1,0 +1,33 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <div class="container">
+                <% if(productosNuevos.length > 0){%>
+                    <h2>Los productos que quieres ver en nuestra tienda próximamente</h2>
+                    <ul>
+                    <% for(productoNuevo of productosNuevos) { %>
+                        <li> <%= productoNuevo %> </li>
+                    <% } %>    
+                    </ul>
+                <%} %>
+            </div>
+            <div class="container">
+                <h1 class="cartitle">Carrito de compras</h1>
+                <p>Compraste:</p>
+                <ul>
+                    <% 
+                        for (let producto of productos){ 
+                            if(producto[4] >= 1){
+                    %>
+                                <li> <%= producto[4] %>- <%=  producto[0]%> </li>
+                    <% 
+                            } 
+                        }
+                    %>
+                </ul>
+                <br>
+                <h2>Subtotal: $<span id="subt">0</span></h2>
+                <h3>Iva: $<span id="iva">0</span></h3>
+                <h1>Total: $<span id="total">0</span></h1>
+            </div>     
+        </main>
+<%- include('includes/footer.ejs') %>

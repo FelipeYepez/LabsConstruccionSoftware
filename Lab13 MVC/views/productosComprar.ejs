@@ -1,0 +1,37 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <h1>Productos en Venta</h1>
+            <hr>
+            <section>
+                <div class="products">
+                    <% for (let product of productos) { %>
+                        <div class="product">
+                            <h2> <%= product[0] %> </h2>
+                            <img src= "<%= product[1] %>" alt= "<%= product[0] %>">
+                            <p class="prices">
+                                <span>$</span>
+                                <span> <%= product[2] %> </span></p>
+                            <p class="center">
+                                <span>Cantidad disponible:</span>
+                                <span> <%= product[3] %> </span></p>
+                            <form action="comprar" method="">
+                                <div class="center">
+                                    <button class="btnquant" type="" value="">-</button>
+                                    <label id="cantzapato" class="quantity"> <%= product[4] %> </label>
+                                    <button class="btnquant" type="" value="">+</button>
+                                </div>
+                            </form>
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+            <hr>
+            <div>
+                <h3>Qué producto quieres ver en nuetra tienda próximamente?</h3>
+                <form action="comprar" method="POST">
+                    <input type="text" name="productoNuevo" value="">
+                    <input type="submit">
+                </form>
+            </div>
+        </main>
+<%- include('includes/footer.ejs') %>
