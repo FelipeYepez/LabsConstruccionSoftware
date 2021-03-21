@@ -1,0 +1,74 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <section>
+                <div class="preguntas">
+                    <h2>Sabias que... versión JavaScript</h2>
+                    <h4>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h4>
+                    <p>Semejanzas:</p>
+                    <ul>
+                        <li>Utilizan sintaxis parecida estilo C</li>
+                        <li>Son ampliamente usadas para aplicaciones web tanto del lado
+                            del cliente como del servidor</li>
+                        <li>Cuentan con una librería Math</li>
+                    </ul>
+                    <p>Diferencias:</p>
+                    <ul>
+                        <li>JavaScript es interpretado mientras que Java es compilado</li>
+                        <li>Java es de tipado riguroso, contrario a JavaScript</li>
+                        <li>Java es un lenguaje de programación orientado a objetos
+                            mientras que JavaScript se basa en objetos</li>
+                        <li>Java puede correr en cualquier máquina virtual, JavaScript
+                            puede correr en navegadores y ahora en servidores gracias a
+                            Node.js</li>
+                    </ul>
+                    <h4>¿Qué métodos tiene el objeto Date?</h4>
+                    <ul>
+                        <li>getDate(): regresa el día del mes</li>
+                        <li>getDay(): regresa el día de la semana</li>
+                        <li>getFullYear(): regresa las cuatro cifras del año actual</li>
+                        <li>getHours(): regresa la hora actual</li>
+                        <li>getMinutes(): regresa los minutos transcurridos de la hora
+                            actual</li>
+                        <li>now(): regresa la fecha actual como el número de
+                            milisegundos transcurridos desde el 1 de enero de 1970</li>
+                    </ul>
+                    <h4>¿Qué métodos tienen los arreglos?</h4>
+                    <ul>
+                        <li>push(): inserta elemento al final del arreglo</li>
+                        <li>pop(): elimina el elemento del final del arreglo</li>
+                        <li>length(): regresa la longitud del arreglo</li>
+                        <li>join(): regresa string de elementos del arreglo concatenados</li>
+                        <li>indexof(): regresa el índice de un elemento dado</li>
+                    </ul>
+                    <h4>¿Cómo se declara una variable con alcance local dentro de una
+                        función?</h4>
+                    <p>Para declarar una variable con alcance local en una función se la
+                        debe instanciar por primera vez dentro de las llaves de la
+                        función sea con var o let. Let tiene alcance tan solo de bloque
+                        mientras que var tiene alcance de la función que la contiene.</p>
+                    <h4>¿Qué implicaciones tiene utilizar variables globales dentro de
+                        funciones?</h4>
+                    <p>Al utilizar una variable global se puede modificar su valor desde
+                        cualquier parte del código por lo que puede producir
+                        alteraciones inesperadas provenientes de otras partes del código
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h3>Referencias: </h3>
+            <ol>
+                <li>GeeksforGeeks. (2019a, June 28). Global and Local variables in
+                    JavaScript.
+                    https://www.geeksforgeeks.org/global-and-local-variables-in-javascript/</li>
+                <li>GeeksforGeeks. (2020, November 16). Difference between Java and
+                    JavaScript.
+                    https://www.geeksforgeeks.org/difference-between-java-and-javascript/</li>
+                <li>JavaScript Date Methods. (n.d.). W3Schools.
+                    https://www.w3schools.com/js/js_date_methods.asp</li>
+                <li>let - JavaScript | MDN. (2020, December 7). MDN Web Docs.
+                    https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let</li>
+            </ol>
+            <hr>
+        </footer>
+<%- include('includes/footer.ejs') %>

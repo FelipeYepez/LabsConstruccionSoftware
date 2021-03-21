@@ -1,0 +1,45 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <section>
+                <div class="preguntas">
+                    <h2>Sabias que... versión Programación Orientada a Eventos</h2>
+                    <h4>¿Por qué es una buena práctica usar JavaScript para checar
+                        que sean válidos los inputs de las formas antes de enviar
+                        los datos al servidor?</h4>
+                    <p>
+                        Al utilizar JavaScript se puede verificar que los datos sean
+                        válidos con la finalidad de no enviarlos incorrectamente al
+                        servidor, de esta manera se puede proporcionar
+                        retroalimentación visual de mejor entenimiento para el
+                        usuario antes de que realmente suceda un error. De igual
+                        forma se evita requerir información por parte del servidor
+                        evitando tráfico.
+                    </p>
+                    <h4>¿Cómo puedes saltarte la seguridad de validaciones hechas
+                        con JavaScript?</h4>
+                    <p>Para desactivar la validación automática del navegador se
+                        puede escribir <strong>novalidate</strong> en el inspector
+                        de la página. Por esta razón es importante de igual forma
+                        validar los datos del lado del servidor.</p>
+                    <h4>Si te puedes saltar la seguridad de las validaciones de
+                        JavaScript, entonces ¿por qué la primera pregunta dice que
+                        es una buena práctica?</h4>
+                    <p>No todos quieren saltarse las validaciones a propósito por lo
+                        que realizarlas desde Javascript mejora la experiencia del
+                        usuario al presentar alertas de manera instantánea sin tener
+                        que esperar a que se envíen los datos incorrectamente. Se
+                        presenta retroalimentación para errores accidentales antes
+                        de que realmente sucedan.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h3>Referencias: </h3>
+            <ol>
+                <li>JavaScript - Form Validation. (n.d.). Tutorialspoint.
+                    https://www.tutorialspoint.com/javascript/javascript_form_validations.htm</li>
+                <li>JavaScript Form Validation. (n.d.). W3schools. https://www.w3schools.com/js/js_validation.asp</li>
+            </ol>
+            <hr>
+        </footer>
+<%- include('includes/footer.ejs') %>

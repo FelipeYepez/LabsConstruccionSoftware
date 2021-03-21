@@ -1,0 +1,60 @@
+<%- include('includes/head.ejs') %>
+        <header>
+            <h1>Laboratorio 12: HTML Dinámico</h1>
+        </header>
+        <main>
+            <section>
+                <div class="preguntas">
+                    <h2>Sabias que... versión HTML Dinámico</h2>
+                    <h4>¿Qué templating engines existen para Node?</h4>
+                    <p>
+                        Un template engine permite usar archivos plantilla
+                        estáticos reemplazando variables por valores
+                        transformando posteriormente la plantilla a HTML para
+                        ser enviada al cliente.
+                        Entre los más utilizados se encuentran:
+                        <ul>
+                            <li>Pug</li>
+                            <li>Haml.js</li>
+                            <li>EJS- Embedded Javascript template engine</li>
+                            <li>React</li>
+                            <li>hbs</li>
+                        </ul>
+                    </p>
+                </div>
+            </section>
+            <hr>
+            <section>
+                <div class="container">
+                    <h2>Validador de contraseñas</h2>
+                    <form action="inicio" method="POST">
+                        <ul>
+                            <li id="regla1">Contener mínimo 5 caracteres</li>
+                            <li id="regla2">Contraseñas deben coincidir</li>
+                        </ul>
+                        <div class="form">
+                            <input id="1pass" type="password" name="pass1" required>
+                            <label>Contraseña</label>
+                        </div>
+                        <div class="form">
+                            <input id="2pass" type="password" name="pass2" required>
+                            <label>Verificar contraseña</label>
+                        </div>
+                        <button class="btn" onclick="verifyPassword()" type="submit">Ingresar
+                            a Productos</button>
+                    </form>
+                </div>
+            </section>
+            <br>
+            <hr>
+        </main>
+        <footer>
+            <h3>Referencias: </h3>
+            <ol>
+                <li>Template Engines. (n.d.). Express.
+                    https://expressjs.com/en/resources/template-engines.html</li>
+            </ol>
+            <hr>
+        </footer>
+        <script src="/JS/password.js"></script>
+<%- include('includes/footer.ejs') %>
