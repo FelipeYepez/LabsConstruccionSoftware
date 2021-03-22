@@ -1,0 +1,8 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <h2>Dicha ruta no existe por favor prueba con alguna de las siguientes:</h2>
+            <% for (let ruta of rutas){ %>
+                <li> <a href=" <%= ruta %> "> <%= ruta %> </a></li>
+            <% } %>
+        </main>
+<%- include('includes/footer.ejs') %>
