@@ -1,6 +1,6 @@
 let rutas = ["/inicio", "/pruductos/comprar", "/productos/carrito",
-"aprende/HTML", "aprende/CSS", "aprende/JS", "aprende/Eventos",
-"aprende/FrameworksEstilo"];
+"/aprende/HTML", "/aprende/CSS", "/aprende/JS", "/aprende/Eventos",
+"/aprende/FrameworksEstilo", "/aprende/HTMLDinamico"];
 
 module.exports = class Rutas{
     //Constructor de la clase. Sirve para crear un nuevo objeto, y en él se definen las propiedades del modelo
