@@ -1,0 +1,59 @@
+<%- include('includes/head.ejs') %>
+    <header>
+        <h1>Laboratorio 14: Manejo de sesiones y cookies</h1>
+    </header>
+    <main>
+        <% if(isLoggedIn === true){ %>
+            <form action="/users/logout" method="GET">
+                <button class="btn">Salir de sesión</button>
+            </form>
+            <% } %>
+                <section>
+                    <div class="preguntas">
+                        <h2>Sabias que... versión Base de Datos</h2>
+                        <h4>Ventajas de escribir el código SQL únicamente en la
+                            capa de modelo</h4>
+                        <p>
+                            Al escribir el código SQL únicamente en la capa del
+                            modelo se vuelve más claro el código al mantener
+                            toda la información y datos en una capa. Será
+                            sencillo de esta manera encontrar todas las
+                            consultas e interacciones que se tiene con la Base
+                            de Datos en una misma carpeta.
+                        </p>
+                        <h4>SQL Injection y cómo prevenirlo</h4>
+                        <p>Es la inserción de código SQL en formas que pueden
+                            perjudicar los datos y la estructura de nuestra Base
+                            de Datos. Al no prevenirlas el sistema es vulnerable
+                            a ataques que utilicen palabras reservadas de SQL.
+                            Para evitar SQL Injection se realizan consultas
+                            parametrizadas en las que la variable no se
+                            concatena con la consulta sino que se construyen por
+                            separado mediante el carácter de interrogación '?'
+                            para definir la posición de cada parámetro. De esta
+                            manera la consulta se precompila para posteriormente
+                            recibir los parámetros evitando que la consulta sea
+                            modificada junto a los parámetros.</p>
+                    </div>
+                </section>
+                <section>
+                    <hr>
+                    <div class="container">
+                        <form action="inicio" method="POST">
+                            <button class="btn" type="submit">Ingresar
+                                a Productos</button>
+                        </form>
+                    </div>
+                </section>
+                <br>
+                <hr>
+            </main>
+            <footer>
+                <h3>Referencias: </h3>
+                <ol>
+                    <li>Álvarez Caules, C. (2013, January 29). SQL Injection y
+                        Consultas Parametrizadas (2/4). Arquitecturajava.
+                        https://www.arquitecturajava.com/sql-injection-y-consultas-preparadas-24/</li>
+                </ol>
+            </footer>
+            <%- include('includes/footer.ejs') %>

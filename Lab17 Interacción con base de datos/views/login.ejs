@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+    <main>
+        <section>
+            <div class="container">
+                <h2>Login</h2>
+                <form action="login" method="POST">
+                    <ul>
+                        <li id="regla1">Contraseña mínimo 5 caracteres</li>
+                        <li id="regla2">Contraseñas deben coincidir</li>
+                    </ul>
+                    <div class="form">
+                        <input type="text" id="usuario" name="usuario" required>
+                        <label>Usuario</label>
+                    </div>
+                    <div class="form">
+                        <input id="1pass" type="password" name="pass1" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <div class="form">
+                        <input id="2pass" type="password" name="pass2" required>
+                        <label>Verificar contraseña</label>
+                    </div>
+                    <input class="btn" onclick="verifyPassword()"
+                        type="submit" value="Ingresar">
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="/JS/login.js"></script>
+<%- include('includes/footer.ejs') %>
