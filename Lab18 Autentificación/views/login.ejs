@@ -1,0 +1,31 @@
+<%- include('includes/head.ejs') %>
+    <main>
+        <section>
+            <div class="container">
+                <h2>Login</h2>
+                <% if(error) { %>
+                    <span class="error"> <%= error %> </span>
+                <% } %>
+                <form action="login" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <div class="form">
+                        <input type="text" name="username" required>
+                        <label>Usuario</label>
+                    </div>
+                    <div class="form">
+                        <input type="password" name="password" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <input class="btn"
+                        type="submit" value="Ingresar">
+                </form>
+            </div>
+            <br>
+            <div class="container">
+                <form action="register" method="GET">
+                    <input type="submit" class="btn" value="Registrarse">
+                </form>
+            </div>
+        </section>
+    </main>
+<%- include('includes/footer.ejs') %>

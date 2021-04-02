@@ -1,0 +1,153 @@
+body{
+    margin: 0 auto;
+    max-width: 80%;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 4em 1em;
+    background-color: whitesmoke;
+}
+h1{
+    text-align: center;
+    color: #333;
+}
+h2 {
+    color:#6495ed;
+    margin-top: 1em;
+    padding-top: 1em;
+    text-align: center;
+}
+p{
+    background-color:whitesmoke;
+    text-align: justify;
+    text-justify: inter-word;
+}
+h4{
+    border-left: 6px solid #6495ed;
+    padding-left: 10px;
+}
+h1 {
+  color: #333;
+}
+strong{
+    color:#6495ed;
+}
+hr{
+    border-color: #6495ed;
+}
+table{
+    margin: auto;
+    color:chocolate;
+    border-collapse: collapse;
+}
+td, th, tr{
+    border: 1px solid black;
+}
+.container{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #6495ed;
+}
+.form{
+    position: relative;
+    margin: 10px 0 40px;
+    width: 320px;
+}
+.form input{
+    background-color: transparent;
+    border-color: transparent;
+    border: 0;
+    outline: none;
+    border-bottom: 2px #333 solid;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+.form label{
+    position: absolute;
+    pointer-events: none;
+    font-size: 18px;
+}
+.form ul,li{
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+.product{
+    display: inline-block;
+    align-items: center;
+    width: 33%;
+    text-align: center;
+}
+.products{
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 258px;
+    max-width: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+    mix-blend-mode: multiply;
+}
+.prices{
+    text-align: center;
+    background: transparent;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Helvetica Neue';
+    color: #333;
+}
+.btnquant{
+    cursor: pointer;
+    width: 10%;
+    font-size: 50px;
+    border: 0;
+    border-radius: 5px;
+    color: #6495ed;
+    font-weight: bold;
+    background: transparent;
+}
+.quantity{
+    width: 10%;
+    font-size: 25px;
+    color: #333;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartitle{
+    color: goldenrod;
+    font-size:xx-large;
+    font-weight: bold;
+}
+.preguntas{
+    margin: 0 auto;
+    max-width: 50em;
+}
+.error{
+    color: red;
+    font-style: italic;
+    font-weight: 200;
+}
