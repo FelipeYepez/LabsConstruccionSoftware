@@ -35,7 +35,10 @@ const rutas_productos = require('./routes/productos');
 const rutas_aprende = require('./routes/aprende');
 const rutas_error = require('./routes/error');
 const rutas_user = require('./routes/users');
-
+app.use((request, response, next) => {
+    response.locals.csrfToken = request.csrfToken();
+    next();
+});
 app.use('/inicio', rutas_inicio);
 app.use('/productos', rutas_productos);
 app.use('/aprende', rutas_aprende);

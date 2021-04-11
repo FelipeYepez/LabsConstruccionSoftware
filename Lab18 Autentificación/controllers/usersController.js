@@ -4,8 +4,7 @@ const session = require('express-session');
 
 exports.getLogin = (request, response, next) => {
     response.render('login', {
-        error: request.session.error,
-        csrfToken: request.csrfToken()
+        error: request.session.error
     });
 };
 
@@ -20,7 +19,7 @@ exports.postLogin = (request, response, next) => {
                         if (doMatch) {
                             request.session.isLoggedIn = true;
                             request.session.user = request.body.username;
-                            return request.session.save(err => {
+                            request.session.save(err => {
                                 response.redirect('/inicio');
                             });
                         }
