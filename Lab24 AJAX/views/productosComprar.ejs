@@ -1,0 +1,97 @@
+<%- include('includes/head.ejs') %>
+        <main>
+            <h1>Productos en Venta</h1>
+            <hr>
+            <section>
+                <input type="hidden" id="_csrf" name="_csrf" value="<%= csrfToken %>">
+                <input placeholder="Buscar" type="text" name="buscar" id="buscar" onkeyup="buscar()">
+            </section>
+            <section>
+                <div class="products" id="resultados">
+                    <% for (let product of productos) { %>
+                        <div class="product">
+                            <h2> <%= product.nombre %> </h2>
+                            <img src= "<%= product.imagen %>" alt= "<%= product.nombre %>">
+                            <p class="prices">
+                                <span>$</span>
+                                <span> <%= product.precio %> </span></p>
+                            <p class="center">
+                                <span>Cantidad disponible:</span>
+                                <span> <%= product.stock %> </span></p>
+                            <!-- <form action="comprar" method=""> -->
+                                <div class="center">
+                                    <button class="btnquant" type="" value="">-</button>
+                                    <label id="cant" class="quantity"> <%= product.en_carrito %> </label>
+                                    <button class="btnquant" type="" value="">+</button>
+                                </div>
+                            <!-- </form> -->
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+            <hr>
+            <% if (isLoggedIn !== undefined){ %>
+            <div>
+                <h3>Qué producto quieres ver en nuetra tienda próximamente?</h3>
+                <form action="comprar?_csrf=<%=csrfToken%>" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <label for="productoNuevo">Nombre del producto</label>
+                    <input type="text" name="productoNuevo" value="">
+                    <br>
+                    <label for="imagen_recomendacion">Selecciona una imagen:</label>
+                    <input type="file" id="imagen_recomendacion" name="imagen_recomendacion">
+                    <br>
+                    <input type="submit">
+                </form>
+            </div>
+            <% } %>
+        </main>
+<%- include('includes/footer.ejs') %>
+
+<script>
+    function buscar() {
+        const valor_busqueda = document.getElementById('buscar').value;
+        //El token de protección CSRF
+        const csrf = document.getElementById('_csrf').value;
+    
+        let data = {valor_busqueda: valor_busqueda};
+        //función que manda la petición asíncrona
+        fetch('buscar', {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'csrf-token': csrf,
+                'Content-Type': 'application/json'
+            },
+        }).then(result => {
+            console.log(result);
+            return result.json(); //Regresa otra promesa
+        }).then(data => {
+            console.log(data);
+            //Modificamos el DOM de nuestra página de acuerdo a los datos de la segunda promesa
+            let html = "";
+            for(let product of data){
+                html += '<div class="product">' +
+                            '<h2>' + product.nombre + '</h2>' +
+                            '<img src= "' + product.imagen + '" alt= "' + product.nombre + '">' +
+                            '<p class="prices">' +
+                                '<span>$</span>' +
+                                '<span>' + product.precio + '</span></p>' +
+                            ' <p class="center"> ' +
+                                '<span>Cantidad disponible:</span>' +
+                                '<span>' + product.stock + '</span></p>' +
+                                // '<form action="comprar" method="">' +
+                                '<div class="center">' +
+                                    '<button class="btnquant">-</button>' +
+                                    '<label id="cant" class="quantity">' + product.en_carrito + '</label>' +
+                                    '<button class="btnquant">+</button>'+
+                                '</div>' +
+                            // '</form>' +
+                        '</div>';
+            }
+            document.getElementById("resultados").innerHTML = html;
+        }).catch(err => {
+            console.error(err);
+        });
+    }
+    </script>

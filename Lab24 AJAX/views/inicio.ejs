@@ -1,0 +1,79 @@
+<%- include('includes/head.ejs') %>
+    <header>
+        <h1>Laboratorio 24: Asynchronous JavaScript and XML</h1>
+    </header>
+    <main>
+        <% if(isLoggedIn === true){ %>
+            <form action="/users/logout" method="GET">
+                <button class="btn">Salir de sesión</button>
+            </form>
+            <% }
+                else{ %>
+                <form action="/users/login" method="GET">
+                    <button class="btn">Inicia sesión</button>
+                </form>
+                <% } %>
+
+                    <section>
+                        <div class="preguntas">
+                            <h2>Sabias que... versión Autentificación</h2>
+                            <h4>Formas de autentificación</h4>
+                            <p>
+                                Autenticarse es verificar la identidad digital
+                                del remitente al hacer una petición de conexión.
+                                Existen las siguientes formas de
+                                autentificación:
+                            </p>
+                            <ul>
+                                <li>Verificación en algo conocido</li>
+                                <ul>
+                                    <li>Contraseña (Unix)</li>
+                                    <li>PIN</li>
+                                    <li>Frase</li>
+                                </ul>
+                                <li>Verificación en algo poseido</li>
+                                <ul>
+                                    <li>Tarjeta de identificación</li>
+                                    <li>Tarjeta inteligente</li>
+                                    <li>Tarjeta coordenadas</li>
+                                    <li>Dispositivo epass token como un USB</li>
+                                    <li>Dispositivo móvil</li>
+                                    <li>Aplicaciones de terceros. Autenticación
+                                        mediante dos factores</li>
+                                </ul>
+                                <li>Verificación en una característica física</li>
+                                <ul>
+                                    <li>Huella digital</li>
+                                    <li>Reconocimiento facial</li>
+                                    <li>Patrón retiniano</li>
+                                    <li>Reconocimiento de voz</li>
+                                </ul>
+                            </ul>
+                            <p>Todas las anteriores autenticaciones se pueden
+                                combinar entre sí para aumentar la seguridad al
+                                momento de verificar la identidad digital de un
+                                usuario.</p>
+                        </div>
+                    </section>
+                    <section>
+                        <hr>
+                        <div class="container">
+                            <form action="inicio" method="POST">
+                                <input type="hidden" name="_csrf" value="<%=
+                                    csrfToken %>">
+                                <button class="btn" type="submit">Ingresar
+                                    a Productos</button>
+                            </form>
+                        </div>
+                    </section>
+                    <hr>
+                </main>
+                <footer>
+                    <h3>Referencias: </h3>
+                    <ol>
+                        <li>Autenticación de usuarios. (2008, November 12). Red
+                            Iris.
+                            https://www.rediris.es/cert/doc/unixsec/node14.html</li>
+                    </ol>
+                </footer>
+                <%- include('includes/footer.ejs') %>
